@@ -1,11 +1,25 @@
 // Scaffold component - Header of the page
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
-const Header = () => {
+type HeaderProps = {
+  id: string;
+}
+const Header = (props: HeaderProps) => {
   return (
-    <div className="Header">
-      Main
-    </div>
+    <header className="Header" id={props.id}>
+      <h1>
+        <Link to="/">Nicholas Hazel</Link>
+      </h1>
+      <nav>
+        <a href="#menu">
+          Menu&nbsp;
+          <FontAwesomeIcon icon={faChevronCircleDown} />
+        </a>
+      </nav>
+    </header>
   )
 };
 

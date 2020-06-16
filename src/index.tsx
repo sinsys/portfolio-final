@@ -1,12 +1,21 @@
+// Entry point of the app - index.tsx
+// Core imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// Component imports
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+// File imports
+import './styles/main.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

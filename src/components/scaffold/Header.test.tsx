@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import Header from './Header';
 
-it(`App renders without crashing`, () => {
+it(`Header renders without crashing`, () => {
   const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>
-      <App />
+      <Header id="Header" />
     </BrowserRouter>,
     div
   );
   ReactDOM.unmountComponentAtNode(div);
-});
+})
